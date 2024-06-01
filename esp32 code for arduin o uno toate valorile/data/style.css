@@ -1,0 +1,61 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+.container {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 20px;
+  padding: 20px;
+}
+
+
+
+.header-row {
+  display: flex;
+  align-items: center;
+}
+
+.inline-info {
+  display: flex;
+  gap: 15px; /* Reduce the gap */
+  margin-left: 20px; /* Adjust this value to move closer to the heading */
+}
+
+
+.gauges-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.gauge-container {
+  width: 300px;
+  height: 300px;
+}
+
+.gauge-container-small {
+  width: 250px;
+  height: 190px;
+}
+
+.gauge-container-smalltemp {
+  width: 240px;
+  height: 174px;
+}
+
+.small-gauge {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  margin: 10px;
+}
+
+input[type="number"] {
+  width: 100px;
+}

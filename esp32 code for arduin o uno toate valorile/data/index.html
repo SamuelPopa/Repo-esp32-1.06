@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>DSP Data Viewer</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/11.4.0/highcharts.js" integrity="sha512-8TTeb9L1dC4nfXg/eSMBpIqsuUSpWChW/HK4M+IfWmC9O5TVYkMhwiCQd/IlmdzznUQAiQprHTMpP3ye4Ab7Lw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/11.4.0/highcharts-more.min.js" integrity="sha512-rAXXnwMYKNeK+0kBbnncbyW5SEJH15Xr8yR+iEcyZfjYob6hem7lb6FInWETS3i455VPw6gqc43AgCMvUvq1og==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/11.4.0/modules/solid-gauge.src.min.js" integrity="sha512-xnCx7m/nrffYYFvdj1QN8evVfrTRoTqBLuMUqXddIleHGENu+7PMlfJDLZb02c14dh7dBhlqDvnjSmcbHNsK1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="generalInfo" class="container">
+        <div class="header-row">
+            <h2>Informatii Generale</h2>
+            <div class="inline-info">
+                <p class="value">ID: <span id="ID">N/A</span></p>
+                <p class="value">CTR: <span id="CTR">N/A</span></p>
+            </div>
+        </div>
+        <p class="value">Frecventa: <span id="fHz">N/A</span> Hz</p>
+        <p class="value">InullA: <span id="InullA">N/A</span></p>
+        <p class="value">Isum: <span id="Isum">N/A</span></p>
+        <p class="value">Temperatura: <span id="temperature">N/A</span> °C</p>
+        <label for="standardCurrent">Val. Nat Tensiune:</label>
+        <input type="number" id="standardCurrent" name="standardCurrent" value="230">
+        <div id="container-temperature" class="gauge-container-smalltemp"></div>
+        <p class="value" style="position: absolute; top: 10px; right: 50px;">Data & Ora: <span id="currentDateTime">N/A</span></p>
+    </div>
+    
+    <div class="gauges-row">
+        <div id="container-voltage" class="gauge-container"></div>
+        <div id="container2-voltage2" class="gauge-container"></div>
+        <div id="container3-voltage3" class="gauge-container"></div>
+        <div>
+            <p>Eroare Tensiune 1 %: <span id="percentage1">N/A</span></p>
+            <p>Eroare Tensiune 2 %: <span id="percentage2">N/A</span></p>
+            <p>Eroare Tensiune 3 %: <span id="percentage3">N/A</span></p>1
+            <label for="maxPercentage">Max Eroare Tensiune %:</label>
+            <input type="text" id="maxPercentage" name="maxPercentage" readonly>
+        </div>
+    </div>
+
+    <div class="gauges-row">
+        <div id="container-current" class="gauge-container"></div>
+        <div id="container2-current2" class="gauge-container"></div>
+        <div id="container3-current3" class="gauge-container"></div>
+        <div id="container-inull" class="gauge-container"></div>
+    </div>
+
+    <div class="gauges-row">
+        <div id="container-Pf" class="gauge-container"></div>
+        <div id="container2-Pf2" class="gauge-container"></div>
+        <div id="container3-Pf3" class="gauge-container"></div>
+        <div id="containerPW" class="gauge-container"></div>
+    </div>
+
+    <div class="gauges-row">
+        <div id="containerPVAR1" class="gauge-container"></div>
+        <div id="containerungifaze" class="gauge-container"></div>
+        <div id="containerungifazecurenti" class="gauge-container"></div>
+        <div id="container-inull" class="gauge-container"></div>
+    </div>
+
+    <div class="gauges-row">
+        <div id="container_angle_V1_I1" class="gauge-container-small"></div>
+        <div id="container_angle_V2_I2" class="gauge-container-small"></div>
+        <div id="container_angle_V3_I3" class="gauge-container-small"></div>
+    </div>
+
+    <div class="container">
+        <div id="realtime-plot" style="width:100%; height:400px;"></div>
+    </div>
+   
+    <script src="app.js"></script>
+</body>
+</html>
